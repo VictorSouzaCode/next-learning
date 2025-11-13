@@ -1,4 +1,5 @@
-
+// Goal: Understand what runs on the client vs server and why it matters.
+// Difference between Server Components and Client Components
 
 export default function Home() {
   return (

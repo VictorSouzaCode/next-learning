@@ -1,3 +1,5 @@
+
+
 const About = () => {
   return (
     <main className="min-h-screen bg-neutral-700 text-white flex justify-center items-center">

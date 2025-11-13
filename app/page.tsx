@@ -8,3 +8,9 @@ export default function Home() {
     </main>
   );
 }
+
+/*
+Use Client Components for: forms, animations, real-time updates, anything with useState/useEffect
+
+Use Server Components for: data fetching, static content, SEO-sensitive content
+*/

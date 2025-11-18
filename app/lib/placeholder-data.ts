@@ -5,7 +5,7 @@ export type Invoice = {
   status: 'pending' | 'paid';
 };
 
-const invoices: Invoice[]  = [
+export const invoices: Invoice[]  = [
   {
     customer_id: "1",
     amount: 15795,

@@ -1,22 +1,31 @@
 // this is a client component, i needs to be one because of interativity
 'use client'
 import { useState } from "react"
+import { useRouter } from "next/navigation"
+import { fakeLogin } from "@/app/lib/authPlaceholder"
+
+// The login page is working, thank good
+// Now i need implent the other routes functionalities in my components
 
 const ContactForm = () => {
-    type FormType = {
-        name: string,
-        email: string
-    }
 
-    const [ formData, setFormData ] = useState<FormType>({
-        name: "",
-        email: ""
-    })
+    const router = useRouter()
 
-    const handleSubmit = (e:React.FormEvent) => {
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+
+    const handleSubmit = (e: React.FormEvent) => {
+
         e.preventDefault()
-        console.log({...formData})
-        setFormData({ name: "", email: ""})
+
+        const ok = fakeLogin(email, password)
+
+        if (!ok) {
+            alert("Invalid credentials");
+            return;
+        }
+
+        router.push('/about')
     }
 
   return (
@@ -25,18 +34,20 @@ const ContactForm = () => {
         handleSubmit(e)
     }}
     className="mt-8 flex flex-col justify-center items-center gap-4">
-        <input 
-        type="text"
-        value={formData.name}
-        onChange={(e) => setFormData({...formData, name: e.target.value})}
-        className="bg-white rounded-2xl h-8 text-black p-4"
-        placeholder="Name"/>
+
         <input 
         type="email"
-        value={formData.email}
-        onChange={(e) => setFormData({...formData, email: e.target.value})}
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
         className="bg-white rounded-2xl h-8 text-black p-4"
         placeholder="Email"/>
+        
+        <input 
+        type="password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        className="bg-white rounded-2xl h-8 text-black p-4"
+        placeholder="Password"/>
         
         <button 
         type="submit"

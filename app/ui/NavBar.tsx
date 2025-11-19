@@ -6,9 +6,6 @@ const NavBar = () => {
       <nav className="h-full">
       <ul className="text-2xl flex justify-around h-full items-center text-white font-medium">
         <li>
-          <Link href={"/"}>Home</Link>
-        </li>
-        <li>
           <Link href={"/about"}>About</Link>
         </li>
         <li>

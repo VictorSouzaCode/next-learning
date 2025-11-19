@@ -1,8 +1,10 @@
 import Link from "next/link"
+import Navbar from "../ui/NavBar"
 
 const page = () => {
   return (
     <main className="min-h-screen bg-neutral-700 text-white flex flex-col justify-center items-center">
+        <Navbar/>
       <h1 className="text-8xl font-bold">Else</h1>
 
           <nav className="mt-8">

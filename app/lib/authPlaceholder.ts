@@ -13,6 +13,6 @@ export function logout() {
     isLoggedIn = false
 }
 
-export function getCurrentUser() {
+export function getLoggedUser() {
     return isLoggedIn ? {name: "Victor"} : null
 }

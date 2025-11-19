@@ -4,9 +4,6 @@ import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { fakeLogin } from "@/app/lib/authPlaceholder"
 
-// The login page is working, thank good
-// Now i need to implement the other routes functionalities in my other components
-
 const ContactForm = () => {
 
     const router = useRouter()

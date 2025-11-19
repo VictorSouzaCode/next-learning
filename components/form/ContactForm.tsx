@@ -49,7 +49,7 @@ const ContactForm = () => {
         <button 
         type="submit"
         className="bg-blue-500 font-medium text-2xl w-20 rounded-2xl cursor-pointer"
-        >Send</button>
+        >Login</button>
     </form>
   )
 }
